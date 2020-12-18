@@ -4,10 +4,10 @@ import com.company.devices.Saleable;
 
 import java.io.File;
 
-public class Animal implements Saleable {
+public abstract class Animal implements Saleable, Feedable {
 
     final static Double MIN_WEIGHT = 2.0;
-
+    final static Double DEFAULT_FOOD_WEIGHT = 1.0;
     final public String species;
     public Boolean isAlive = true;
     public String name;
@@ -18,7 +18,13 @@ public class Animal implements Saleable {
         this.species = species;
     }
 
-    public void feed(Double foodWeight) {
+    public void feed() {
+//        uzycie metody poniżej
+        feed(DEFAULT_FOOD_WEIGHT);
+
+    }
+
+    public void feed(double foodWeight) {
         if (this.isAlive) {
             this.weight += foodWeight;
             System.out.println("thx for food");
