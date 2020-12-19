@@ -33,7 +33,6 @@ public class Car extends Device implements Saleable {
                 '}';
     }
 
-
     @Override
     public void sell(Human seller, Human buyer, Double price) throws Exception {
         if (seller.getCash() == null || buyer.getCash() == null) {
@@ -54,4 +53,8 @@ public class Car extends Device implements Saleable {
         System.out.println("samochód sprzedano za " + price + " od " + seller.firstName + " do " + buyer.firstName);
 
     }
+
+    void abstract boolean refule(){
+        return true;
+    };
 }

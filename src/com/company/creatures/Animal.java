@@ -19,11 +19,15 @@ public abstract class Animal implements Saleable, Feedable {
     }
 
     public void feed() {
+        if (this.species == "dog") {
+            feed(2.0);
+        } else if (this.species == "cat") {
+            feed(0.5);
+        } else {
 //        uzycie metody poniżej
-        feed(DEFAULT_FOOD_WEIGHT);
-
+            feed(DEFAULT_FOOD_WEIGHT);
+        }
     }
-
     public void feed(double foodWeight) {
         if (this.isAlive) {
             this.weight += foodWeight;
