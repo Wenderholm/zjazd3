@@ -2,7 +2,7 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
-public class Car extends Device implements Saleable {
+public abstract class Car extends Device implements Saleable {
     private final String color;
     public Double value;
 
@@ -54,7 +54,5 @@ public class Car extends Device implements Saleable {
 
     }
 
-    void abstract boolean refule(){
-        return true;
-    };
+    public abstract void refuel();
 }
