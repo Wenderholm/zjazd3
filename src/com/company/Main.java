@@ -43,8 +43,9 @@ public class Main {
         me.pet = pig;
         me.pet = new Pet("cat");
 
-//        System.out.println(FarmAnimal.getWeight());
-//        FarmAnimal.feed(1.0);
+        System.out.println(pig.getWeight());
+        pig.feed(10.0);
+        System.out.println(pig.getWeight());
 //        System.out.println(FarmAnimal.getWeight());
 //        FarmAnimal.feed();
 
